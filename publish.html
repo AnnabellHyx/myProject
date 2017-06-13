@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>基本信息页面</title>
+
+    <!--这是所有发布页面的样式-->
+    <link rel="stylesheet" href="css/pub_mas.css">
+    <link rel="stylesheet" href="css/pub-1.css">
+    <link rel="stylesheet" href="css/pub-add.css">
+
+    <!--这是用到的jquery和angularjs-->
+    <script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="framework/angular-1.4.0/angular.min.js"></script>
+    <script src="framework/angular-1.4.0/angular-route.min.js"></script>
+<!--     <script src="http://malsup.github.io/jquery.form.js"></script> -->
+    <script src="js/form.js"></script>
+
+    <!--这是所有发布页面用到的js-->
+    <script src="js/publish.js"></script>
+    <script src="js/publish_1.js"></script>
+	<!-- <script src="js/page.js"></script> -->
+</head>
+<body ng-controller="pubCtr">
+    <div class="pub_box">
+        <div class="pub_bg">
+            <!--这是头部-->
+            <header class="pub_header">
+                <img class="pub_logo" src="images/pub_logo.png" alt="这是一个logo">
+                <p class="head_p">欢迎:<span>{{massage.username}} &nbsp&nbsp</span>
+                    <a href="./index.html">返回首页</a>
+                    <a href="./login.html">退出系统</a>
+                </p>
+            </header>
+            <!--这是主体-->
+            <article class="pub_arc">
+                <!--这是左边导航栏-->
+                <ul class="pub_ul">
+                    <li>
+                        <a href="#/publishMassage">基本信息</a>
+                    </li>
+                    <li>
+                        <a href="#/publishPub/ctId/0/ntId/0">发布新闻</a>
+                    </li>
+                </ul>
+                <!--这是右边内容-->
+                <article class="arc_tab" ng-view>
+
+                </article>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

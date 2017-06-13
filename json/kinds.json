@@ -1,0 +1,13 @@
+[{
+  "id":1,
+  "name":"common",
+  "realName":"普通"
+},{
+  "id":2,
+  "name":"import",
+  "realName":"要点"
+},{
+  "id":3,
+  "name":"pints",
+  "realName":"热点"
+}]

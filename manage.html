@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员页面-审核通过页面</title>
+    <!--这是css--->
+    <link rel="stylesheet" href="css/manage.css">
+
+    <!--这是用到的jquery和angularjs-->
+    <script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="framework/angular-1.4.0/angular.min.js"></script>
+    <script src="framework/angular-1.4.0/angular-route.min.js"></script>
+
+    <!--这是用到的路由和js-->
+    <script src="js/manage.js"></script>
+    <script src="js/manage_1.js"></script>
+</head>
+<body>
+    <div class="pub_box">
+        <div class="pub_bg">
+            <header class="pub_header">
+                <img class="pub_logo" src="images/pub_logo.png" alt="这是一个logo">
+                <img class="man_logo" src="images/sign.png" alt="这是一张背景">
+                <span class="word">欢迎您 &nbsp;&nbsp;管理员</span>
+                <p class="head_p">
+                    <a href="index.html">返回首页</a>
+                    <a href="login.html">退出系统</a>
+                </p>
+            </header>
+            <article class="pub_arc">
+                <div class="left_type">
+                    <div >
+                        <a href="#/allAudited" class="active">未审核</a>
+                    </div>
+                    <div >
+                        <a href="javascript:void(0)">已审核</a>
+                    </div>
+                    <ul>
+                        <li >
+                            <a href="#/audited">已通过审核</a>
+                        </li>
+                        <li>
+                            <a href="#/unAudited">未通过审核</a>
+                        </li>
+                    </ul>
+                </div>
+                <article class="arc_tab" ng-view>
+
+                </article>
+            </article>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻首页</title>
+    <link rel="stylesheet" href="framework/bootstrap-3.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="framework/templatemo-style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="framework/bootstrap-3.3.0-dist/js/bootstrap.min.js"></script>
+
+	<!--导入angularJS--->
+    <script src="framework/angular-1.4.0/angular.min.js"></script>
+    <script src="framework/angular-1.4.0/angular-route.min.js"></script>
+     <!--导入自己写的js--->
+    <script src="js/index.js"></script>
+</head>
+<body ng-controller="indexCtr">
+    <div class="index_bg">
+        <img class="index_tit" src="images/index_title.png" alt="这是一个标题">
+       
+        <a href="login.html" style="float:right;margin-right:100px; margin-top:25px">退出系统</a>
+        <div class="white">
+            <p class="wel_in">Welcome To Us !<p>
+            <div class="sea_div">
+                <input type="text" name="title_in">
+                <span>搜索</span>
+            </div>
+            <div class="loginIndex">	
+	        	<div class="welcomeName">欢迎：<span></span></div>
+	        	<div class="welcomeDate">当前日期：<span></span></div>
+	        </div>
+            <ul class="caozuo" >
+                <li><a href="#" ng-click="register()">register</a></li>
+                <li><a href="#">/</a></li>
+                <li><a href="#" ng-click="login()">login</a></li>
+            </ul>
+        </div>
+        <nav class="in-nav container">
+            <ul>
+                <li><a href="javascript:void(0)">news</a></li>
+                <li><a href="javascript:void(0)">首页</a></li>
+                <li ng-repeat="type in types">
+                <!--  根据新闻的类型 分别条转载不同的list页面-->
+                	<a href="javascript:void(0)" ng-click="action(type.id)">{{type.realName}}</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="in_box container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+                            <li  data-slide-to="1" data-target="#carousel-example-generic"></li>
+                            <li  data-slide-to="2" data-target="#carousel-example-generic"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/1.jpg" alt="First photo">
+                                <!-- Static Header -->
+                                <div class="header-text hidden-xs">
+                                    <div class="col-md-12 text-center">
+
+                                    </div>
+                                </div><!-- /header-text -->
+                            </div>
+                            <div class="item">
+                                <img src="images/2.jpg" alt="First photo">
+                                <!-- Static Header -->
+                                <div class="header-text hidden-xs">
+                                    <div class="col-md-12 text-center">
+                                        <h2>Aenean feugiat in ante et </h2>
+                                        <br>
+                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                                        <br>
+                                    </div>
+                                </div><!-- /header-text -->
+                            </div>
+                            <div class="item">
+                                <img src="images/3.jpg" alt="First photo">
+                                <!-- Static Header -->
+                                <div class="header-text hidden-xs">
+                                    <div class="col-md-12 text-center">
+                                        <h2>Aenean feugiat in ante et </h2>
+                                        <br>
+                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                                        <br>
+                                    </div>
+                                </div><!-- /header-text -->
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div id="owl-demo-1" class="owl-carousel">
+                        <img src="images/slide-2.jpg" />
+                    </div>
+                    <img class="buttom" src="images/banner.jpg" />
+                </div>
+            </div>
+        </div>
+        <!--下面左边部分-->
+        <div id="page-content" class="index-page container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box box-left">
+                        <div class="play">
+                            <div class="line">
+                                <p><span>体育</span></p>
+                            </div>
+                            <img src="images/4.jpg" alt="这是一张图片">
+                            <article>
+                                <a href="#"><h3>詹皇三双骑士不敌绿军 官方:KD伤停4周</h3></a>
+                                <section>
+                                    全国政协十二届五次会议将于3月3日开幕，十二届全国人大五次会议将于3月5日开幕，
+                                    今年出席全国两会的江苏委员共有51位。3月1日下午，出席全国政协十二届五次会议的江苏委员抵达北京，
+                                    随团采访的现代快报记者了解到，政协委员们进行了大量准备工作，针对两聚一高、深化供给侧改革、教育、医疗、住房、
+                                    环保、就业等民生热点问题进行调研。
+                                    来北京的路上，委员们还就各自关心的问题热烈地交流了看法。
+                                    3月2日下午，江苏的全国人大代表也将集中乘高铁到会。
+                                </section>
+                            </article>
+                        </div>
+                        <div class="play">
+                            <div class="line">
+                                <p><span>政治</span></p>
+                            </div>
+                            <img src="images/4.jpg" alt="这是一张图片">
+                            <article>
+                                <a href="#"><h3>詹皇三双骑士不敌绿军 官方:KD伤停4周</h3></a>
+                                <section>
+                                    全国政协十二届五次会议将于3月3日开幕，十二届全国人大五次会议将于3月5日开幕，
+                                    今年出席全国两会的江苏委员共有51位。3月1日下午，出席全国政协十二届五次会议的江苏委员抵达北京，
+                                    随团采访的现代快报记者了解到，政协委员们进行了大量准备工作，针对两聚一高、深化供给侧改革、教育、医疗、住房、
+                                    环保、就业等民生热点问题进行调研。
+                                    来北京的路上，委员们还就各自关心的问题热烈地交流了看法。
+                                    3月2日下午，江苏的全国人大代表也将集中乘高铁到会。
+                                </section>
+                            </article>
+                        </div>
+                        <div class="play">
+                            <div class="line">
+                                <p><span>娱乐</span></p>
+                            </div>
+                            <img src="images/4.jpg" alt="这是一张图片">
+                            <article>
+                                <a href="#"><h3>詹皇三双骑士不敌绿军 官方:KD伤停4周</h3></a>
+                                <section>
+                                    全国政协十二届五次会议将于3月3日开幕，十二届全国人大五次会议将于3月5日开幕，
+                                    今年出席全国两会的江苏委员共有51位。3月1日下午，出席全国政协十二届五次会议的江苏委员抵达北京，
+                                    随团采访的现代快报记者了解到，政协委员们进行了大量准备工作，针对两聚一高、深化供给侧改革、教育、医疗、住房、
+                                    环保、就业等民生热点问题进行调研。
+                                    来北京的路上，委员们还就各自关心的问题热烈地交流了看法。
+                                    3月2日下午，江苏的全国人大代表也将集中乘高铁到会。
+                                </section>
+                            </article>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box box-center">
+                        <div class="in_photo">
+                            <div class="line">
+                                <p><span>photo</span></p>
+                            </div>
+                            <table class="box_tabp">
+                                <tbody>
+                                    <tr>
+                                        <td class="one_p"><img src="images/5.jpg" alt=""></td>
+                                        <td colspan="2" class="two_p"><img src="images/in2.jpg" alt=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" class="two_p"><img src="images/in5.jpg" alt=""></td>
+                                        <td class="one_p p_right" ><img src="images/in3.jpg" alt=""></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="one_p"><img src="images/15.jpg" alt=""></td>
+                                        <td class="one_p p_center"><img src="images/16.jpg" alt=""></td>
+                                        <td class="one_p p_right" ><img src="images/17.jpg" alt=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="in_video">
+                            <div class="line">
+                                <p><span>video</span></p>
+                            </div>
+                            <table class="box_tabv">
+                                <tbody>
+                                <tr>
+                                    <td><img src="images/in2.jpg" alt="">
+                                        <a href="#"><h4>美国总统访华</h4></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/in2.jpg" alt="">
+                                        <a href="#"><h4>美国总统访华</h4></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="images/in2.jpg" alt="">
+                                        <a href="#"><h4>美国总统访华</h4></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="line">
+                                <p><span>新闻要点</span></p>
+                            </div>
+                            <ul>
+                                <li ng-repeat="kindyao in kindyaos"><a href="">{{$index+1}}、{{kindyao.newsTitle}}</a></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box box_last box-right">
+                        <div class="in-search">
+                            <div class="line">
+                                <p><span>新闻搜索</span></p>
+                            </div>
+                            <div class="input-group sousuoIn">
+                                <input type="text" class="form-control" placeholder="奥巴马访华">
+                                <span class="input-group-addon glyphicon glyphicon-search sea_span"></span>
+                            </div>
+                            <div class="keyword">
+                                <span>国际</span><span>数码</span><span>动物</span><span>家居</span><span>游戏</span>
+                                <span>NBA</span><span>明星</span><span>高考</span><span>诈骗</span><span>足球</span>
+                                <span>电影</span><span>时尚</span><span>维秘</span><span>走秀</span><span>奥运会</span>
+                                <span>招聘</span><span>社会</span><span>神话</span><span>奥巴马</span><span>国内</span>
+                            </div>
+                        </div>
+                        <div class="hot_news">
+                            <div class="line">
+                                <p><span>热点新闻</span></p>
+                            </div>
+                            <article ng-repeat="kindre in kindres">
+                                <a href="#"><h3>{{kindre.newsTitle}}</h3></a>
+                                <section>
+                                    {{kindre.content}}
+                                </section>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="foot-one">
+                <div class="btn-left">
+                    <span><img src="images/btn-left.png" alt="这是一个图标" class="leftI"></span>
+                </div>
+                <div class="center-p" id="center-p">
+                    <ul class="UlImg">
+                        <a href="#" class="oneImg">
+                            <li><img src="images/zhengzhi.jpg" alt="">
+                                <h4>政治</h4>
+                            </li>
+                        </a>
+                        <a href="#" class="twoImg">
+                            <li><img src="images/sports.jpg" alt=""><h4>体育</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/start.jpg" alt=""><h4>娱乐</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/kexue.jpg" alt=""><h4>科学</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/jiaju.jpg" alt=""><h4>家居</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/money.jpg" alt=""><h4>财经</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/lvyou.jpg" alt=""><h4>旅游</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/left.jpg" alt=""><h4>生活</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/study.jpg" alt=""><h4>教育</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/jiaju.jpg" alt=""><h4>家居</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/jiankang.jpg" alt=""><h4>健康</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/start.jpg" alt=""><h4>明星</h4></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="btn-right">
+                    <span><img src="images/btn-right.png" alt="这是一个图标" class="rightI"></span>
+                </div>
+            </div>
+            <div class="foot-two">
+                <ul class="about">
+                    <li class="top-tit">关于我们<em>About</em></li>
+                    <li>来自中北大学信息商务学院</li>
+                    <li>计算机科学与技术</li>
+                    <li>请扫码提出您宝贵的意见</li>
+                </ul>
+                <ul class="phone">
+                    <li class="top-tit">联系方式<em>Phone</em></li>
+                    <li>手机:18306845198</li>
+                    <li>QQ:1398858625</li>
+                    <li>微信:hyx318419</li>
+                </ul>
+                <ul class="saotu">
+                    <li class="top-tit">扫码关注<em>Look</em></li>
+                    <li>
+                        <img src="images/QQ.png" alt="QQ">
+                        <img src="images/weixin.png" alt="weixin">
+                    </li>
+                </ul>
+            </div>
+            <div class="foot-three">
+                <p>最终解释权归韩彧霞所有，联系方式:18306845198</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

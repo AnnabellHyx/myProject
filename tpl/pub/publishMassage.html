@@ -1,0 +1,52 @@
+
+<div class="massage">基本信息</div>
+<form>
+    <table class="mass_tab">
+        <tbody>
+        <tr >
+            <td rowspan="7" class="photo">
+            	<div id="photo1"><img src="images/im/1.jpg" alt="头像图片"></div>
+            	<a class="exPhoto" href="javascript:void(0)">更换头像</a>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;&nbsp;昵称:<input type="text" id="massN" readonly= "true"  ng-model="massage.username"></td>
+            <td>&nbsp;&nbsp;身份:发布者</td>
+        </tr>
+        <tr>
+
+            <td colspan="2">&nbsp;&nbsp;年龄:<input type="text"  readonly= "true" ng-model="massage.age" ></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="mass_cont">&nbsp;&nbsp;所在地&nbsp;&nbsp;&nbsp;:<input type="text"  readonly= "true" ng-model="massage.address">  </td>
+        </tr>
+        <tr> 
+            <td colspan="2" class="mass_cont">&nbsp;&nbsp;个性签名:<input type="text"  readonly= "true"  ng-model="massage.word" ></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="mass_cont">&nbsp;&nbsp;个人说明:<input type="text"  readonly= "true " ng-model="massage.explain" ></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="mass_cont">&nbsp;&nbsp;邮箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<input type="email"  readonly= "true" ng-model="massage.email" ></td>
+        </tr>
+        <tr>
+            <td  colspan="3" class="last">
+                <button class="btn" id="btnX" ng-click="updateMass()">修改</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="choseTu" >
+    	<img alt="" src="images/im/1.jpg">
+    	<img alt="" src="images/im/2.jpg">
+    	<img alt="" src="images/im/3.jpg">
+    	<img alt="" src="images/im/4.jpg">
+    	<img alt="" src="images/im/5.jpg">
+    	<img alt="" src="images/im/6.jpg">
+    	<img alt="" src="images/im/7.jpg">
+    	<img alt="" src="images/im/8.jpg">
+    	<img alt="" src="images/im/9.jpg">
+    	<img alt="" src="images/im/10.jpg">
+    </div>
+</form>
+

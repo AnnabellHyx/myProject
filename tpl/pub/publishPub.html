@@ -1,0 +1,50 @@
+
+    <div class="Add">
+         <span>
+            <input class="ser_text" type="text" name="search"><span class="search">查找</span>
+            <a href="#/addNews" class="Addnews">添加新闻</a>
+         </span>
+    </div>
+    <div >
+        <table class="type_tab">
+            <tbody>
+            <tr>
+                <td class="tab_left">栏目名称</td>
+                <td class="tab_right">
+                    <a href="#/publishPub/ctId/0/ntId/0" class="{{params.ct==0?'active_t':''}}">全部</a>
+                    <a href="#/publishPub/ctId/{{type.id}}/ntId/{{params.nt}}" class="{{params.ct==type.id?'active_t':''}}" ng-repeat="type in types" >{{type.realName}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="tab_left">新闻类型</td>
+                <td class="tab_right">
+                    <a href="#/publishPub/ctId/0/ntId/0" class="{{params.nt==0?'active_t':''}}">全部</a>
+                    <a href="#/publishPub/ctId/{{params.ct}}/ntId/{{kind.id}}" class="{{params.nt==kind.id?'active_t':''}}" ng-repeat="kind in kinds">{{kind.realName}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="view_news" >
+        <p class="view_p">总计<em>{{leng}}</em>条新闻&nbsp;&nbsp;提示：单击体面可显示具体内容</p>
+        <div class="contentBox">
+	        <div class="view_content" ng-repeat="news in newss" is-reader="toggle.now">
+	            <div class="con_box" >
+	                <div class="pub_mass">栏目名称：{{news.newsType}}&nbsp;&nbsp;标题：{{news.newsTitle}}&nbsp;&nbsp;新闻类型：{{news.newsHot}}&nbsp;&nbsp;上传时间：{{news.time}}</div>
+	                <div class="pub_oper">审核状态：<span>{{news.status}}</span></div>
+	            </div>
+	            <div class="content">
+	                {{news.content}}
+	            </div>
+	            <div class="oper">
+	                <a href="#/publishPub/id/{{news.id}}">删除新闻</a>
+	            </div>
+	        </div>
+        </div>
+    </div>
+    <div class="pageDiv">
+		<ul class="page">  
+        	<li ><a class="prev active_a" href="#/publishPub/ctId/{{params.ct}}/ntId/{{params.nt}}" ><<</a></li>
+        	<li ><a class="next " href="#/publishPub/ctId/{{params.ct}}/ntId/{{params.nt}}" >>></a></li>
+		</ul>  	
+	</div>

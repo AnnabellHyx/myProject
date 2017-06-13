@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app.register">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="css/register.css">
+	<script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="framework/angular-1.4.0/angular.min.js"></script>
+    <script src="framework/angular-1.4.0/angular-route.min.js"></script>
+    <script src="js/register.js"></script>
+</head>
+<body ng-controller="registerCtr">
+    <div class="reg_bg">
+        <div class="black_bg">
+        <img class="logo" src="images/logo.png" alt="这是一个logo">
+
+        <!--输入框-->
+        <div class="reg_box">
+            <div class="reg_box1">
+                <p class="reg_p"><span class="use_reg">用户注册 / </span>register</p>
+                <div class="line"></div>
+                <form>
+                    <table class="mass_tab">
+                        <tbody>
+                        <tr>
+                            <td>&nbsp;&nbsp;昵称:<input type="text" name="username" ng-model="massages.username"></td>
+                            <td>&nbsp;&nbsp;身份:<input type="radio" name="identity" value="用户" class="identity" ng-model="massages.identify">用户
+                                <input type="radio" name="identity" value="发布者" class="identity" ng-model="massages.identify">发布者</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;密码:<input type="password" name="password" ng-model="massages.password"></td>
+                            <td>&nbsp;&nbsp;年龄:<input type="number" name="age" ng-model="massages.age"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="mass_cont">&nbsp;&nbsp;所在地&nbsp;&nbsp;&nbsp;:<input type="text" name="address" ng-model="massages.address"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="mass_cont">&nbsp;&nbsp;个性签名:<input type="text" name="word" ng-model="massages.word"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="mass_cont"><span>&nbsp;&nbsp;个人说明:</span><textarea cols="54" rows="5" ng-model="massages.explain"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="mass_cont">&nbsp;&nbsp;邮箱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :<input type="email" name="email" ng-model="massages.email"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button class="regBtn" ng-click="registerAction('login.html')">注册</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p class="foot_p">新闻发布系统 版权所有 联系电话：18306845198</p>
+        </footer>
+        </div>
+    </div>
+</body>
+</html>

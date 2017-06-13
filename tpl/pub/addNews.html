@@ -1,0 +1,43 @@
+<div class="add_tit">编写新闻</div>
+<div>
+    <div class="add_div">
+        <p class="add_p">新闻分类</p>
+        <span>栏目名称：</span>
+        <input type="search" name="news_name" list="name_type" class="typesName">
+        <datalist id="name_type">
+            <option value="体育">体育</option>
+            <option value="娱乐">娱乐</option>
+            <option value="科学">科学</option>
+        </datalist>
+        <span>新闻类型：</span>
+        <input type="search" name="news_type" list="news_types" class="importType">
+        <datalist id="news_types">
+            <option value="普通">普通</option>
+            <option value="要点">要点</option>
+            <option value="头条">头条</option>
+        </datalist>
+        <span>&nbsp;&nbsp;双击选择</span>
+    </div>
+    <div class="add_div">
+        <p class="add_p">新闻标题</p>
+        <input type="text" name="news_title" class="n_box" ng-model="newsContent.newsTitle">
+    </div>
+    <div class="add_div">
+        <p class="add_p">新闻标签</p>
+        <input type="text" name="news_label" class="n_box" ng-model="newsContent.newsTag">
+        <span>&nbsp;&nbsp;注意：用“；”隔开</span>
+    </div>
+    <div class="add_div">
+        <p class="add_p">新闻内容</p>
+        <textarea name="news_content" id="" cols="100" rows="10" ng-model="newsContent.content"></textarea>
+    </div>
+    <form id="fileForm" enctype="multipart/form-data"  method="POST" class="add_div" >
+        <p class="add_p">新闻文件</p>
+        <input type="file" name="news_file"  accept=""  id="news_file"/>
+    </form>
+    
+    <div class="add_oper">
+        <button class="add_c" ng-click="saveAndCon()">保存并继续</button>
+        <button class="add_b" ng-click="saveAndClose()">保存并返回</button>
+    </div>
+</div>

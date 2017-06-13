@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+/**评论区的样式*/
+
+                
+.commentNew{
+	width:1000px;
+	margin:30px auto;
+	padding-bottom:20px;
+	overflow:hidden;
+	font-size:14px;
+	border-bottom:1px solid #ccc;
+}
+.commentNew>img{
+	float:left;
+	width:40px;
+	height:40px;
+	border-radius: 20px;
+}
+.commentNew>.newContent{
+	width:600px;
+	margin-left:30px;
+	overflow:hidden;
+	float:left;
+	
+}
+.newContent>p{
+	margin:10px 0;
+	color:#4C4C4C;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>列表页</title>
+    
+    <link rel="stylesheet" href="framework/bootstrap-3.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="framework/templatemo-style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/list.css">
+    <!-- 导入Angular和js -->
+    <script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="framework/angular-1.4.0/angular.min.js"></script>
+    <script src="framework/angular-1.4.0/angular-route.min.js"></script>
+    <script src="js/list.js"></script>
+</head>
+<body ng-controller="listCtr">
+    <div class="index_bg">
+        <img class="index_tit" src="images/index_title.png" alt="这是一个标题">
+        <div class="white">
+            <p class="wel_in">Welcome To Us !<p>
+            <div class="sea_div">
+                <input type="text" name="title_in">
+                <span>搜索</span>
+            </div>
+            <div class="loginIndex">	
+	        	<div class="welcomeName">欢迎：<span></span></div>
+	        	<div class="welcomeDate">当前日期：<span></span></div>
+	        </div>
+            <ul class="caozuo" >
+                <li><a href="#" ng-click="register()">register</a></li>
+                <li><a href="#">/</a></li>
+                <li><a href="#" ng-click="login()">login</a></li>
+            </ul>
+        </div>
+        <nav class="in-nav">
+            <ul>
+                <li class="in_active"><a href="#">News</a></li>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">新闻发布</a></li>
+                <li><a href="#">新闻类型</a></li>
+            </ul>
+        </nav>
+        <!--下面左边部分-->
+        <div class="container list">
+            <div class="row">
+                <div class="line">
+                    <p><span>{{typeName}}</span></p>
+                </div>
+                <section class="news" ng-repeat="news in newss" is-reader="toggle.now">
+                    <a href="#"><h3>{{news.newsTitle}}</h3></a>
+                    <article>
+                        <p class="author">BY:<span>{{news.username}}</span>&nbsp;&nbsp;发布时间:<span>{{news.time}}</span></p>
+                        <img src={{news.newsImg}} alt="这是一个图片文件" class="file">
+                        <a class="list-content">
+                              {{news.content}}
+                        </a>
+                    </article>
+                    <div class="list-btn">
+                        <button class="btn btn-default" ng-click="speak(news.id)">
+                            <span class="glyphicon glyphicon-envelope" ></span>评论
+                        </button>
+                        <button class="btn btn-default praise"  id="{{news.id}}" >
+                            <span class="glyphicon glyphicon-thumbs-up" ></span><span class="number">{{news.newsNum}}</span>
+                        </button>
+                    </div>
+                </section>
+               
+                    
+                <div class="pageDiv">
+					<ul class="page">  
+			        	<li ><a class="prev active_a" href="list.html?id={{params}}" ><<</a></li>
+			        	<li ><a class="next " href="list.html?id={{params}}" >>></a></li>
+					</ul>  	
+				</div>
+            </div>
+        </div>
+        <footer>
+            <div class="foot-one">
+                <div class="btn-left">
+                    <img src="images/btn-left.png" alt="这是一个图标">
+                </div>
+                <div class="center-p" id="center-p">
+                    <ul class="UlImg">
+                        <a href="#" class="oneImg">
+                            <li><img src="images/zhengzhi.jpg" alt="">
+                                <h4>政治</h4>
+                            </li>
+                        </a>
+                        <a href="#" class="twoImg">
+                            <li><img src="images/sports.jpg" alt=""><h4>体育</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/start.jpg" alt=""><h4>娱乐</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/kexue.jpg" alt=""><h4>科学</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/kexue.jpg" alt=""><h4>科学</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/money.jpg" alt=""><h4>财经</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/lvyou.jpg" alt=""><h4>旅游</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/left.jpg" alt=""><h4>生活</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/study.jpg" alt=""><h4>教育</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/jiaju.jpg" alt=""><h4>家居</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/jiankang.jpg" alt=""><h4>健康</h4></li>
+                        </a>
+                        <a href="#">
+                            <li><img src="images/start.jpg" alt=""><h4>明星</h4></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="btn-right">
+                    <img src="images/btn-right.png" alt="这是一个图标">
+                </div>
+            </div>
+            <div class="foot-two">
+                <ul class="about">
+                    <li class="top-tit">关于我们<em>About</em></li>
+                    <li>来自中北大学信息商务学院</li>
+                    <li>计算机科学与技术</li>
+                    <li>请扫码提出您宝贵的意见</li>
+                </ul>
+                <ul class="phone">
+                    <li class="top-tit">联系方式<em>Phone</em></li>
+                    <li>手机:18306845198</li>
+                    <li>QQ:1398858625</li>
+                    <li>微信:hyx318419</li>
+                </ul>
+                <ul class="saotu">
+                    <li class="top-tit">扫码关注<em>Look</em></li>
+                    <li>
+                        <img src="images/QQ.png" alt="QQ">
+                        <img src="images/weixin.png" alt="weixin">
+                    </li>
+                </ul>
+            </div>
+            <div class="foot-three">
+                <p>最终解释权归韩彧霞所有，联系方式:18306845198</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

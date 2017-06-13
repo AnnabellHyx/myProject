@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app.login">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="css/jquery.idcode.css" type="text/css" rel="stylesheet">
+    <script src="framework/jquery-2.1.4/jquery.min.js"></script>
+    <script src="framework/angular-1.4.0/angular.min.js"></script>
+    <script src="framework/angular-1.4.0/angular-route.min.js"></script>
+    <script src="js/jquery.idcode.js"></script>
+    <script src="js/login.js"></script>
+   
+    
+</head>
+<body ng-controller="loginCtr">
+<div class="reg_bg">
+    <img class="logo" src="images/logo.png" alt="这是一个logo">
+    <img class="reg_img" src="images/true6.jpg" alt="这是一张背景">
+    <!--输入框-->
+    <div class="reg_box">
+        <div class="reg_box1">
+            <div class="reg_p"><span class="use_reg">用户登录 / </span>login</div>
+            <div class="line"></div>
+            <form class="loginForm">
+                <label class="box">
+                    用户名：<input type="text" name="username" ng-model="user.username">
+                </label>
+                <p class="no_num">没有帐号？| <a href="register.html">请注册</a></p>
+                <label class="box">
+                    密&nbsp;&nbsp;&nbsp;码：<input class="pass" type="password" name="password" ng-model="user.password">
+                </label>
+                <label class="box">
+                    验证码：<input type="text" id ="Txtidcode" name="proving" class ="txtVerification" style="width:130px;" > <span id="idcode" style="position:relative;top:5px;"></span>        
+                 </label>
+                <button class="reg" ng-click="loginAction()">登录</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p class="foot_p">新闻发布系统 版权所有 联系电话：18306845198</p>
+    </footer>
+</div>
+</body>
+</html>

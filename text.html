@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>move</title>
+    <style type="text/css">
+        body {
+            margin:0;
+            padding:0;
+        }
+        ul,ol {
+            margin:0;
+            padding:0;
+        }
+        td div{
+            width:150px;
+            height:170px;
+            border:solid 1px #060;
+        }
+    </style>
+</head>
+<body>
+<input type="button" onclick="left(this)" value="left"/>
+<input type="button" onclick="right(this)" value="right"/>
+<div style="border:solid 1px #06c;height:200px;width:90%;overflow:hidden" id="inner">
+    <table>
+        <tr>
+            <td><div>a</div></td>
+            <td><div>b</div></td>
+            <td><div>c</div></td>
+            <td><div>d</div></td>
+            <td><div>e</div></td>
+            <td><div>f</div></td>
+            <td><div>g</div></td>
+            <td><div>h</div></td>
+            <td><div>i</div></td>
+            <td><div>j</div></td>
+            <td><div>k</div></td>
+            <td><div>l</div></td>
+            <td><div>m</div></td>
+            <td><div>n</div></td>
+            <td><div>o</div></td>
+        </tr>
+    </table>
+</div>
+</body>
+<script type="text/javascript">
+
+    var d=document.getElementById("inner");
+    var left=function(obj) {
+        //alert(d.scrollLeft);
+        d.scrollLeft-=156;
+    }
+    var e=0
+    var right=function(obj) {
+//    d.scrollLeft+=156;
+        e=d.scrollLeft+156
+        run()
+    }
+
+    var run = function(){
+        if(d.scrollLeft>=e){d.scrollLeft=e;return;}
+        d.scrollLeft+=1;
+        setTimeout(run,10);
+    }
+
+</script>
+
+
+
+</html>

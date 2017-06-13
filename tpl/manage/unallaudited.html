@@ -1,0 +1,25 @@
+<div class="man_p1">未审核的新闻</div>
+<div class="view_news">
+    <p class="view_p">总计<em>{{leng}}</em>条新闻&nbsp;&nbsp;提示：单击体面可显示具体内容</p>
+    <div class="contentBox">
+	    <div class="view_content" ng-repeat="new in news" is-reader="toggle.now">
+	        <div class="con_box">
+	            <div class="pub_mass">栏目名称：{{new.newsType}}&nbsp;&nbsp;标题：{{news.newsTitle}}&nbsp;&nbsp;新闻类型：{{new.newsHot}}&nbsp;&nbsp;上传时间：{{new.time}}&nbsp;&nbsp;作者：{{new.username}}</div>
+	            <div class="pub_oper">审核状态：<span style="color:red">{{new.status}}</span></div>
+	        </div>
+	        <div class="content">
+	            {{new.content}}
+	        </div>
+	        <div class="oper">
+	            <a href="#/allAudited/id/{{new.id}}/status/审核通过">新闻发布</a>
+	            <a href="#/allAudited/id/{{new.id}}/status/审核未通过">审核未通过</a>
+	        </div>
+	    </div>
+    </div>
+    <div class="pageDiv">
+		<ul class="page">  
+        	<li ><a class="prev active_a" href="#/allAudited" ><<</a></li>
+        	<li ><a class="next " href="#/allAudited" >>></a></li>
+		</ul>  	
+	</div>
+</div>
